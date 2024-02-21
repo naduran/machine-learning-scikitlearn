@@ -59,5 +59,6 @@
     - IPCA. Se debe usar si se tiene un dataset exigente y pocos recursos
     - KPCA. Estructura no lineal separable (KERNEL)
 - Uso: `python pca.py`
-
+- Ejemplo de implementación PCA e IPCA sobre datset heart.csv con variación de número de componentes...
+ ![Descripción de la imagen](/Recursos/pca_ipca_batch11_random_27.jpg)
 
