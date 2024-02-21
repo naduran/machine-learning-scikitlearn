@@ -34,3 +34,30 @@
     - `import sklearn`
     - `print(sklearn.__version__)`
     - `exit()`
+
+
+## Impacto de features en modelos
+- Los features son las variables de entrada
+- Más features puede causar más ruido y generar más costo de procesamiento
+- Sesgo y Varianza (Bias y Variance): Sesgo es que tan acertado es al mundo real. Varianza es que tan agrupados están.
+- Se espera un sesgo y varianza bajos
+- Overfitting: Sesgo bajo y varianza alta. Modeo muy complejo, no se ajuta con datos reales.
+- Underfitting: Sesgo alto y varianza baja. Modelo muy simple.
+-Técnicas:
+    -Técnicas de reducción de dimensionalidad (PCA)
+    - Regularización: Penzalizar los features que no estén aportando.
+    - Balanceo: Oversampling y Undersampling
+
+## PCA (Análisis de componentes principales)
+- Usar cuando hay muchos features, alta correlacion entre features, overfitting o alto coste computacional.
+- Combinar varios features que mantengan la información importante
+- Pasos:
+    - Matriz de covarianza (Que tanto se relacionan los features)
+    - Hallar vectores propios y valores propios (fuerza y variabilidad de relaciones)
+    - Los vectores propios con mayor variabilidad se escogen
+- Variaciones:
+    - IPCA. Se debe usar si se tiene un dataset exigente y pocos recursos
+    - KPCA. Estructura no lineal separable (KERNEL)
+- Uso: `python pca.py`
+
+
