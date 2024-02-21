@@ -11,6 +11,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 
 
+#Función para entrenar modelos de PCA e IPCA según el número de componentes que entre por parámetro
 def compute_accuracy(X_train, X_test, y_train, y_test, n_components, method):
     accuracies = []
     for n in n_components:
@@ -78,7 +79,7 @@ if __name__ == '__main__':
     print("SCORE IPCA: ", logistic.score(dt_test, y_test)) #Vamos a seleccionar el accuracy
 
 ################################################################################################
-    # Gráfica variando el númeor de componentes en cada modelo
+    # Gráfica variando el número de componentes en cada modelo
     n_components = range(2, 10)
     pca_accuracies = compute_accuracy(x_train, x_test, y_train, y_test, n_components, 'PCA')
     ipca_accuracies = compute_accuracy(x_train, x_test, y_train, y_test, n_components, 'IPCA')
@@ -90,6 +91,8 @@ if __name__ == '__main__':
     plt.ylabel('Accuracy of Logistic Regression')
     plt.legend()
     plt.show()
+
+
 
 
 

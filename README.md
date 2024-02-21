@@ -29,7 +29,7 @@
     - `python -m pip install matplotlib`
     - `python -m pip install scikit-learn`
 
-- Verificar instalación correcta;
+- Verificar instalación correcta:
     - Iniciar interprete en la terminal:`python`
     - `import sklearn`
     - `print(sklearn.__version__)`
@@ -59,6 +59,26 @@
     - IPCA. Se debe usar si se tiene un dataset exigente y pocos recursos
     - KPCA. Estructura no lineal separable (KERNEL)
 - Uso: `python pca.py`
-- Ejemplo de implementación PCA e IPCA sobre datset heart.csv con variación de número de componentes...
+- Ejemplo de implementación PCA e IPCA sobre datset heart.csv con variación de número de componentes
  ![Descripción de la imagen](/Recursos/pca_ipca_batch11_random_27.jpg)
+
+- KPCA
+    - Kernels: Clasificador no lineal (tomar datos en una dimensión menor y se proyectan)
+    - Lineales, polinomiales, gaussianos
+    - `python kpca.py` (Recordar tener activo el entorno `entorno\Scripts\activate.bat`)
+
+## Regularización
+- Aplicar penalizaciones a las variables que no aportan
+- Disminuir complejidad del modelo (Overfitting)
+- Más sesgo por menos varianza
+- Pérdida: Que tan lejos estamos de los datos reales
+- Menos pérdida, mejor modelo
+- Tipos:
+    - L1 Lasso. Volver 0 los features qu emás ruido producen (mínimos cuadrados) (En la lambda se hace la penalización)
+    - L2 Ridge. Les quita valor a los features que menos aportan, pero permite que sigan en el modelo ya que no llegan a 0. (Se penaliza con la pendiente al cuadrado y no valor absoluto como en L1)
+    - ElasticNet. Combinación de los anteriores
+    - Usar Lasso cuando hay pocos features que se relacionen con la variable a predecir
+    - Usar Ridge si hay varios features relacionados con la variable a predecir
+    - Parámetro alfa en ElasticNet: Si es cercano a cero se comporta como Ridge, su es cercano a 1 se comporta como Lasso
+
 
