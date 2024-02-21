@@ -16,21 +16,21 @@
 - Clasificación [categorizar variables de salida], regresión [variable continua, no discretea (tiempo)], clustering [agrupación de datos y exploración de atípicos]
 
 ## Preparación del entorno
-- Instalar pip: python .\Recursos\get-pip.py
-- Instalar entorno virtual (evitar conflicto de librerias): python -m pip install virtualenv
-- Nombrar entorno virtual: python -m virtualenv entorno
-- Activar entorno: entorno\Scripts\activate.bat (Si usas windows, asegurarse de que esté sobre la cmd y no powershell)
-- Revisar archivo requirements.txt en la carpeta Recursos para instalación librerías (python -m pip install -r .\Recursos\requirements.txt)
+- Instalar pip: `python .\Recursos\get-pip.py`
+- Instalar entorno virtual (evitar conflicto de librerias): `python -m pip install virtualenv`
+- Nombrar entorno virtual: `python -m virtualenv entorno`
+- Activar entorno: `entorno\Scripts\activate.bat` (Si usas windows, asegurarse de que esté sobre la cmd y no powershell)
+- Revisar archivo requirements.txt en la carpeta Recursos para instalación librerías (`python -m pip install -r .\Recursos\requirements.txt`)
 - En caso de que falle reqirements.txt:
-    - python -m pip install numpy
-    - python -m pip install scipy
-    - python -m pip install joblib
-    - python -m pip install pandas
-    - python -m pip install matplotlib
-    - python -m pip install scikit-learn
+    - `python -m pip install numpy`
+    - `python -m pip install scipy`
+    - `python -m pip install joblib`
+    - `python -m pip install pandas`
+    - `python -m pip install matplotlib`
+    - `python -m pip install scikit-learn`
 
 - Verificar instalación correcta;
-    - Iniciar interprete en la terminal: python
-    - import sklearn
-    - print(sklearn.__version__)
-    - exit()
+    - Iniciar interprete en la terminal:`python`
+    - `import sklearn`
+    - `print(sklearn.__version__)`
+    - `exit()`
