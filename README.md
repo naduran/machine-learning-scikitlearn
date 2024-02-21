@@ -80,5 +80,24 @@
     - Usar Lasso cuando hay pocos features que se relacionen con la variable a predecir
     - Usar Ridge si hay varios features relacionados con la variable a predecir
     - Parámetro alfa en ElasticNet: Si es cercano a cero se comporta como Ridge, su es cercano a 1 se comporta como Lasso
+     - `python regularizacion.py` (Recordar tener activo el entorno `entorno\Scripts\activate.bat`)
+
+## El problema de valores atípicos
+- Cualquier medición que no se comporta como el patrón de los otros
+- Pueden generar sesgos, detección temprana de fallos
+- Métodos:
+    - Estadísticos:
+        - Z-Score: Desviación estándar, distancia de un punto a la media (cuantas desviaciones)
+        - DBSCAN: Agrupaciones de los datos
+        - Fórmula:
+            - Si el punto está por debajo del cuartil1 (Q1) menos 1.5 del valor del rango intercuartílico (Q3-Q1)
+            - Si el punto está sobre el cuartil3 (Q2) más 1.5 del valor del rango intercuartílico (Q3-Q1)
+            - Boxplots, gráficas de distribución de una variable entre sí, teniendo en cuenta sus extremos y centro
+
+## Regresiones Robustas con Scikit-learn
+- RANSAC: Muestreo aleatorio sobre los datos. Se asume que los datos selecciónados son los buenos. Se entrena el modelo y se compara con otros datos seleccionados (varios muestreos). Encuentra la mejor combinación (inliners)
+- Huber Regressor: Disminuye el aporte de los valores atípicos en el modelo. A partir de esto calcula la pérdida-
+    - Se revisa si el error absoluto de la pérdida está sobre un umbral (epsilon)
+    - El valor más recomendado de epsilo es 1.35 (95% eficiencia)
 
 
