@@ -74,13 +74,13 @@
 - Pérdida: Que tan lejos estamos de los datos reales
 - Menos pérdida, mejor modelo
 - Tipos:
-    - L1 Lasso. Volver 0 los features qu emás ruido producen (mínimos cuadrados) (En la lambda se hace la penalización)
+    - L1 Lasso. Volver 0 los features que más ruido producen (mínimos cuadrados) (En la lambda se hace la penalización)
     - L2 Ridge. Les quita valor a los features que menos aportan, pero permite que sigan en el modelo ya que no llegan a 0. (Se penaliza con la pendiente al cuadrado y no valor absoluto como en L1)
     - ElasticNet. Combinación de los anteriores
     - Usar Lasso cuando hay pocos features que se relacionen con la variable a predecir
     - Usar Ridge si hay varios features relacionados con la variable a predecir
     - Parámetro alfa en ElasticNet: Si es cercano a cero se comporta como Ridge, su es cercano a 1 se comporta como Lasso
-     - `python regularizacion.py` (Recordar tener activo el entorno `entorno\Scripts\activate.bat`)
+    - `python regularizacion.py` (Recordar tener activo el entorno `entorno\Scripts\activate.bat`)
 
 ## El problema de valores atípicos
 - Cualquier medición que no se comporta como el patrón de los otros
@@ -99,5 +99,7 @@
 - Huber Regressor: Disminuye el aporte de los valores atípicos en el modelo. A partir de esto calcula la pérdida-
     - Se revisa si el error absoluto de la pérdida está sobre un umbral (epsilon)
     - El valor más recomendado de epsilo es 1.35 (95% eficiencia)
+- `python robust.py` (Recordar tener activo el entorno `entorno\Scripts\activate.bat`)
+
 
 
