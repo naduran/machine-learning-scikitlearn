@@ -141,6 +141,29 @@
         - Todos los casos posibles
     - `python cross_val.py` (Recordar tener activo el entorno `entorno\Scripts\activate.bat`)
 
+## Optimización Paramétrica con CV
+- Optimizar un modelo que funciona para encontrar los mejores resultados
+- Es díficl medir la sensibilidad manualmente cambianod de a un parámeto
+- Enfoques:
+    - Gilla de parámetros (GridSearchCV) CV es cross-validation
+        - Matriz de los parámetros con un diccionario
+        - Identificar los rangos
+        - Usar cross validation
+        - Se debe definir todas las combinaciones de parámetros
+        - Estudio a fondo
+    - Búsqueda aleatorizada (RandomizedSearchCV)
+        - Definir el diccionario
+        - Hace combinaciones aleatorias
+        - Solo se define un parámetro a la vez
+        - Exploración
+- `python randomized.py` (Recordar tener activo el entorno `entorno\Scripts\activate.bat`)
+- Autosklearn: Automáticamente prueba diferentes modelos predefinidos y configuraciones de parámetros comunes hasta encontrar la que más se ajuste según los datos que le pasemos como entrada.
+    - Se puede correr si cumple los requerimientos de instalación:
+    `python autosklearn.py` (Recordar tener activo el entorno `entorno\Scripts\activate.bat`)
+
+    
+
+
     
     
 
