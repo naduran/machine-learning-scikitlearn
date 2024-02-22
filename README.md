@@ -126,8 +126,20 @@
     - Sabemos cuantos grupos queremos (k) (k-means, spectral Clustering)
     - Preferimos que el modelo nos de la (k) óptima (Meanshift,Clustering jerarquico,, DBScan)
     - Se puede agregar estas columnas con el grupo a los datasets
+    - `python k_means.py` (Recordar tener activo el entorno `entorno\Scripts\activate.bat`)
+    - `python meanshift.py` (Recordar tener activo el entorno `entorno\Scripts\activate.bat`)
 
-
+## Cross Validation
+- Los datos es lo importante
+- Todos los modelos son malos, solo que algunos son útiles
+    - Hold on: Partir en entrenamiento y pruebas (Prototipado rápido y baja capacidad de cómputo)
+    - K-Folds, validación cruzadas. Plegar los datos k veces usando diferentes partes del dataset
+        - Más recomendable, tiempo para hacer pruebas. Pre a técnica de optimización paramétrica
+    - LOOCV, partir train y test. Hacemos el entrenamiento con todos los datos menos uno y se repite sobre todo el dataset
+        - Gran poder de computo
+        - Pocos datos
+        - Todos los casos posibles
+    - `python cross_val.py` (Recordar tener activo el entorno `entorno\Scripts\activate.bat`)
 
     
     
