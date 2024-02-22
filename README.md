@@ -98,8 +98,32 @@
 - RANSAC: Muestreo aleatorio sobre los datos. Se asume que los datos selecciónados son los buenos. Se entrena el modelo y se compara con otros datos seleccionados (varios muestreos). Encuentra la mejor combinación (inliners)
 - Huber Regressor: Disminuye el aporte de los valores atípicos en el modelo. A partir de esto calcula la pérdida-
     - Se revisa si el error absoluto de la pérdida está sobre un umbral (epsilon)
-    - El valor más recomendado de epsilo es 1.35 (95% eficiencia)
-- `python robust.py` (Recordar tener activo el entorno `entorno\Scripts\activate.bat`)
+    - El valor más recomendado de epsilon es 1.35 (95% eficiencia)
+    - `python robust.py` (Recordar tener activo el entorno `entorno\Scripts\activate.bat`)
+
+## Métodos de ensamble
+- Probar diferentes estimadores y aplicar un método para lograr un consenso
+- Diversidad
+- Estrategias:
+    - Bagging. La opinión de varios expertos en paralelo y lograr un consenso
+    - Bootstrap Aggragation
+        - Se crean particiones uniformes
+        - Se construyen conjuntos independientes
+        - Se elige una respuesta según los resultados individuales
+        - Random forest, Voting Classifiers/Regressors
+    - Boosting. Un experto aprende del error anterior de otro experto y lo va mejorando
+        - Clasificadores más pequeños, fortalecer a través de la repetición
+        - Termina en consenso
+        - AdaBoost, Gradient Tree Boosting, XGBoost (No está en sklearn)
+    - `python bagging.py` (Recordar tener activo el entorno `entorno\Scripts\activate.bat`)
+    - `python boosting.py` (Recordar tener activo el entorno `entorno\Scripts\activate.bat`)
+    - boosting demuestra mejores resultados que bagging
+    
+    
+    
+
+
+
 
 
 
