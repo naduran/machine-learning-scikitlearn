@@ -118,7 +118,17 @@
     - `python bagging.py` (Recordar tener activo el entorno `entorno\Scripts\activate.bat`)
     - `python boosting.py` (Recordar tener activo el entorno `entorno\Scripts\activate.bat`)
     - boosting demuestra mejores resultados que bagging
-    
+
+## Estrategias de Clustering
+- Identificar patrones que no son visibles
+- No supervisado, no etiquetas
+- Casos de uso:
+    - Sabemos cuantos grupos queremos (k) (k-means, spectral Clustering)
+    - Preferimos que el modelo nos de la (k) óptima (Meanshift,Clustering jerarquico,, DBScan)
+    - Se puede agregar estas columnas con el grupo a los datasets
+
+
+
     
     
 
