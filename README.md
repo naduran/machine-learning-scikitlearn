@@ -164,10 +164,16 @@
 ## Salida a producción
 - carpeta in: Archvios de texto, csv, imágenes
 - carpeta out: Resultado de exportación de archivos ML
+- Antes de correr crear el entorno virtual dentro de esta carpeta, y activarlo
 - main.py controla todo el flujo de principio a fin
 - En utils defino una clase con las funciones que necesito para cargar data, exportar modelo
 - Constructor en Models, para definición de parámetros por diccionarios y modelos
+- `python produccion/main.py` (Como hay dos entornos se recomienda entrar a la capeta "produccion" y correr `python main.py` )
 - Se exporta el modelo en formato pkl
+- flask: Crear servidores web con python `pip install flask`
+- `python produccion/server.py` (Como hay dos entornos se recomienda entrar a la capeta "produccion" y correr `python server.py` )
+- Cuando se corra, en la ruta (ej. http://127.0.0.1:8080/predict) quedarán las predicciones
+
     
 
 
