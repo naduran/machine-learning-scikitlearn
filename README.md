@@ -161,6 +161,13 @@
     - Se puede correr si cumple los requerimientos de instalación:
     `python autosklearn.py` (Recordar tener activo el entorno `entorno\Scripts\activate.bat`)
 
+## Salida a producción
+- carpeta in: Archvios de texto, csv, imágenes
+- carpeta out: Resultado de exportación de archivos ML
+- main.py controla todo el flujo de principio a fin
+- En utils defino una clase con las funciones que necesito para cargar data, exportar modelo
+- Constructor en Models, para definición de parámetros por diccionarios y modelos
+- Se exporta el modelo en formato pkl
     
 
 
